@@ -3,28 +3,41 @@
  * CodeIgniter
  *
  * An open source application development framework for PHP
- *
+ * PHP를위한 오픈 소스 애플리케이션 개발 프레임 워크 입니다.
+ * 
  * This content is released under the MIT License (MIT)
+ * 이 콘텐츠 버전은 MIT 라이센스를 따릅니다.
  *
  * Copyright (c) 2014 - 2019, British Columbia Institute of Technology
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
+ * of this software and associated documentation files (the "Software"), 
+ * 이 소프트웨어 및 관련 문서 파일 (이하 "소프트웨어")의 사본을 얻는 모든 사람에게 사용 권한이 무료로 부여되며,
+ * 
+ * to deal in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
+ * copies of the Software, 
+ * 본 소프트웨어를 사용, 복사, 수정, 병합, 게시, 배포, 재 라이센스 및 / 또는 판매 할 수있는 권리를 포함하되 이에 국한되지 않고 제한없이 소프트웨어를 취급합니다
+ * 
+ * and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- *
+ * 소프트웨어가 제공된 사람이 다음 조건을 충족 할 수 있도록 허용합니다
+ * 
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
+ * 저작권 고지 및 허가 고지는 소프트웨어의 모든 사본에서  중요한 부분입니다.
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * 이 소프트웨어는 상품성의 보증을 포함하여 (단, 이에 한하지 않음) 명시 적이거나 묵시적인 어떤 종류의 보증도없이 "있는 그대로"제공됩니다.
+ * 
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
+ * 저작자 또는 저작권 보유자는 소프트웨어 사용과 관련하여 발생했거나 또는 기타 행위로 인해 발생한 청구, 기타 책임에 대해 책임을 지지 않습니다.
+ * 
  *
  * @package	CodeIgniter
  * @author	EllisLab Dev Team
@@ -38,7 +51,8 @@
 
 /*
  *---------------------------------------------------------------
- * APPLICATION ENVIRONMENT
+ * APPLICATION ENVIRONMENT 
+ * 
  *---------------------------------------------------------------
  *
  * You can load different configurations depending on your
