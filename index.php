@@ -118,12 +118,13 @@ switch (ENVIRONMENT)
  *---------------------------------------------------------------
  *
  * This variable must contain the name of your "system" directory.
- * 이 변수는 "system" 디렉토리의 이름을 포함해야 합니다.
+ * 현재 "system" 폴더의 이름을 이곳에 작성하십시오.
  * 
  * Set the path if it is not in the same directory as this file.
- * 이 파일과 같은 디렉토리에 없으면 경로를 설정하십시오
+ * 같은 폴더 안에 이 파일이 없으면 경로를 작성하십시오 
  */
 	$system_path = 'system';
+// system 폴더라 / 폴더에 없으면 $system_path 변수에 작성하십시오 
 
 /*
  *---------------------------------------------------------------
@@ -131,8 +132,9 @@ switch (ENVIRONMENT)
  *---------------------------------------------------------------
  *
  * If you want this front controller to use a different "application"
- * directory than the default one you can set its name here. The directory
- * can also be renamed or relocated anywhere on your server. If you do,
+ * directory than the default one you can set its name here.
+ * 이 프론트 컨트롤러가 
+ * The directory can also be renamed or relocated anywhere on your server. If you do,
  * use an absolute (full) server path.
  * For more info please see the user guide:
  *
