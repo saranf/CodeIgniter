@@ -90,19 +90,24 @@
 switch (ENVIRONMENT)
 {
 	case 'development':
-		error_reporting(-1);
-		ini_set('display_errors', 1);
+		error_reporting(-1); //Report all PHP errors
+		ini_set('display_errors', 1);//에러의 표시 여부를 조절할 경우
+// string ini_set (string $varname (설정의 이름), staring $newvalue(설정의 값)) 이 함수가 포함된 페이지가 사용될 때만 활성화 된다.  
 	break;
+//에러 보고 ENVIRONMENT 상수를 development로 표시하면 모든 php 오류가 발생할 때 브라우져에 표시됩니다.
 
 	case 'testing':
 	case 'production':
 		ini_set('display_errors', 0);
 		error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
 	break;
+//에러 보고 ENVIRONMENT 상수를 production 으로 설정하면 오류를 표시하지 않습니다.
 
 	default:
 		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+//요청을 처리할 준비가 되지 않았습니다.
 		echo 'The application environment is not set correctly.';
+//응용 프로그램 환경이 제대로 설정되지 않았습니다.
 		exit(1); // EXIT_ERROR
 }
 
