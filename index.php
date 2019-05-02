@@ -78,10 +78,14 @@
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
+ * 버그 보고서 
  *---------------------------------------------------------------
  *
  * Different environments will require different levels of error reporting.
+ * 서로 다른 환경에서는 다양한 레벨의 오류보고가 필요합니다.
+ * 
  * By default development will show errors but testing and live will hide them.
+ * 기본적으로 개발시 오류를 보여줄 것입니다. 하지만 테스트 및 실행은 오류를 표시합니다.
  */
 switch (ENVIRONMENT)
 {
