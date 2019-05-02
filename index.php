@@ -114,10 +114,14 @@ switch (ENVIRONMENT)
 /*
  *---------------------------------------------------------------
  * SYSTEM DIRECTORY NAME
+ * 시스템 폴더 이름
  *---------------------------------------------------------------
  *
  * This variable must contain the name of your "system" directory.
+ * 이 변수는 "system" 디렉토리의 이름을 포함해야 합니다.
+ * 
  * Set the path if it is not in the same directory as this file.
+ * 이 파일과 같은 디렉토리에 없으면 경로를 설정하십시오
  */
 	$system_path = 'system';
 
