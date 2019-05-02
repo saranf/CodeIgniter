@@ -1,0 +1,636 @@
+.
+├── DCO.txt
+├── application
+│   ├── cache
+│   │   └── index.html
+│   ├── config
+│   │   ├── autoload.php
+│   │   ├── config.php
+│   │   ├── constants.php
+│   │   ├── database.php
+│   │   ├── doctypes.php
+│   │   ├── foreign_chars.php
+│   │   ├── hooks.php
+│   │   ├── index.html
+│   │   ├── memcached.php
+│   │   ├── migration.php
+│   │   ├── mimes.php
+│   │   ├── profiler.php
+│   │   ├── routes.php
+│   │   └── user_agents.php
+│   ├── controllers
+│   │   ├── Welcome.php
+│   │   └── index.html
+│   ├── core
+│   │   └── index.html
+│   ├── helpers
+│   │   └── index.html
+│   ├── hooks
+│   │   └── index.html
+│   ├── index.html
+│   ├── language
+│   │   ├── english
+│   │   │   └── index.html
+│   │   └── index.html
+│   ├── libraries
+│   │   └── index.html
+│   ├── logs
+│   │   └── index.html
+│   ├── models
+│   │   └── index.html
+│   ├── third_party
+│   │   └── index.html
+│   └── views
+│       ├── errors
+│       │   ├── cli
+│       │   │   ├── error_404.php
+│       │   │   ├── error_db.php
+│       │   │   ├── error_exception.php
+│       │   │   ├── error_general.php
+│       │   │   ├── error_php.php
+│       │   │   └── index.html
+│       │   ├── html
+│       │   │   ├── error_404.php
+│       │   │   ├── error_db.php
+│       │   │   ├── error_exception.php
+│       │   │   ├── error_general.php
+│       │   │   ├── error_php.php
+│       │   │   └── index.html
+│       │   └── index.html
+│       ├── index.html
+│       └── welcome_message.php
+├── build-release.sh
+├── composer.json
+├── contributing.md
+├── index.php
+├── license.txt
+├── phpdoc.dist.xml
+├── readme.rst
+├── system
+│   ├── core
+│   │   ├── Benchmark.php
+│   │   ├── CodeIgniter.php
+│   │   ├── Common.php
+│   │   ├── Config.php
+│   │   ├── Controller.php
+│   │   ├── Exceptions.php
+│   │   ├── Hooks.php
+│   │   ├── Input.php
+│   │   ├── Lang.php
+│   │   ├── Loader.php
+│   │   ├── Log.php
+│   │   ├── Model.php
+│   │   ├── Output.php
+│   │   ├── Router.php
+│   │   ├── Security.php
+│   │   ├── URI.php
+│   │   ├── Utf8.php
+│   │   ├── compat
+│   │   │   ├── hash.php
+│   │   │   ├── index.html
+│   │   │   ├── mbstring.php
+│   │   │   ├── password.php
+│   │   │   └── standard.php
+│   │   └── index.html
+│   ├── database
+│   │   ├── DB.php
+│   │   ├── DB_cache.php
+│   │   ├── DB_driver.php
+│   │   ├── DB_forge.php
+│   │   ├── DB_query_builder.php
+│   │   ├── DB_result.php
+│   │   ├── DB_utility.php
+│   │   ├── drivers
+│   │   │   ├── cubrid
+│   │   │   │   ├── cubrid_driver.php
+│   │   │   │   ├── cubrid_forge.php
+│   │   │   │   ├── cubrid_result.php
+│   │   │   │   ├── cubrid_utility.php
+│   │   │   │   └── index.html
+│   │   │   ├── ibase
+│   │   │   │   ├── ibase_driver.php
+│   │   │   │   ├── ibase_forge.php
+│   │   │   │   ├── ibase_result.php
+│   │   │   │   ├── ibase_utility.php
+│   │   │   │   └── index.html
+│   │   │   ├── index.html
+│   │   │   ├── mssql
+│   │   │   │   ├── index.html
+│   │   │   │   ├── mssql_driver.php
+│   │   │   │   ├── mssql_forge.php
+│   │   │   │   ├── mssql_result.php
+│   │   │   │   └── mssql_utility.php
+│   │   │   ├── mysql
+│   │   │   │   ├── index.html
+│   │   │   │   ├── mysql_driver.php
+│   │   │   │   ├── mysql_forge.php
+│   │   │   │   ├── mysql_result.php
+│   │   │   │   └── mysql_utility.php
+│   │   │   ├── mysqli
+│   │   │   │   ├── index.html
+│   │   │   │   ├── mysqli_driver.php
+│   │   │   │   ├── mysqli_forge.php
+│   │   │   │   ├── mysqli_result.php
+│   │   │   │   └── mysqli_utility.php
+│   │   │   ├── oci8
+│   │   │   │   ├── index.html
+│   │   │   │   ├── oci8_driver.php
+│   │   │   │   ├── oci8_forge.php
+│   │   │   │   ├── oci8_result.php
+│   │   │   │   └── oci8_utility.php
+│   │   │   ├── odbc
+│   │   │   │   ├── index.html
+│   │   │   │   ├── odbc_driver.php
+│   │   │   │   ├── odbc_forge.php
+│   │   │   │   ├── odbc_result.php
+│   │   │   │   └── odbc_utility.php
+│   │   │   ├── pdo
+│   │   │   │   ├── index.html
+│   │   │   │   ├── pdo_driver.php
+│   │   │   │   ├── pdo_forge.php
+│   │   │   │   ├── pdo_result.php
+│   │   │   │   ├── pdo_utility.php
+│   │   │   │   └── subdrivers
+│   │   │   │       ├── index.html
+│   │   │   │       ├── pdo_4d_driver.php
+│   │   │   │       ├── pdo_4d_forge.php
+│   │   │   │       ├── pdo_cubrid_driver.php
+│   │   │   │       ├── pdo_cubrid_forge.php
+│   │   │   │       ├── pdo_dblib_driver.php
+│   │   │   │       ├── pdo_dblib_forge.php
+│   │   │   │       ├── pdo_firebird_driver.php
+│   │   │   │       ├── pdo_firebird_forge.php
+│   │   │   │       ├── pdo_ibm_driver.php
+│   │   │   │       ├── pdo_ibm_forge.php
+│   │   │   │       ├── pdo_informix_driver.php
+│   │   │   │       ├── pdo_informix_forge.php
+│   │   │   │       ├── pdo_mysql_driver.php
+│   │   │   │       ├── pdo_mysql_forge.php
+│   │   │   │       ├── pdo_oci_driver.php
+│   │   │   │       ├── pdo_oci_forge.php
+│   │   │   │       ├── pdo_odbc_driver.php
+│   │   │   │       ├── pdo_odbc_forge.php
+│   │   │   │       ├── pdo_pgsql_driver.php
+│   │   │   │       ├── pdo_pgsql_forge.php
+│   │   │   │       ├── pdo_sqlite_driver.php
+│   │   │   │       ├── pdo_sqlite_forge.php
+│   │   │   │       ├── pdo_sqlsrv_driver.php
+│   │   │   │       └── pdo_sqlsrv_forge.php
+│   │   │   ├── postgre
+│   │   │   │   ├── index.html
+│   │   │   │   ├── postgre_driver.php
+│   │   │   │   ├── postgre_forge.php
+│   │   │   │   ├── postgre_result.php
+│   │   │   │   └── postgre_utility.php
+│   │   │   ├── sqlite3
+│   │   │   │   ├── index.html
+│   │   │   │   ├── sqlite3_driver.php
+│   │   │   │   ├── sqlite3_forge.php
+│   │   │   │   ├── sqlite3_result.php
+│   │   │   │   └── sqlite3_utility.php
+│   │   │   └── sqlsrv
+│   │   │       ├── index.html
+│   │   │       ├── sqlsrv_driver.php
+│   │   │       ├── sqlsrv_forge.php
+│   │   │       ├── sqlsrv_result.php
+│   │   │       └── sqlsrv_utility.php
+│   │   └── index.html
+│   ├── fonts
+│   │   ├── index.html
+│   │   └── texb.ttf
+│   ├── helpers
+│   │   ├── array_helper.php
+│   │   ├── captcha_helper.php
+│   │   ├── cookie_helper.php
+│   │   ├── date_helper.php
+│   │   ├── directory_helper.php
+│   │   ├── download_helper.php
+│   │   ├── file_helper.php
+│   │   ├── form_helper.php
+│   │   ├── html_helper.php
+│   │   ├── index.html
+│   │   ├── inflector_helper.php
+│   │   ├── language_helper.php
+│   │   ├── number_helper.php
+│   │   ├── path_helper.php
+│   │   ├── security_helper.php
+│   │   ├── string_helper.php
+│   │   ├── text_helper.php
+│   │   ├── typography_helper.php
+│   │   ├── url_helper.php
+│   │   └── xml_helper.php
+│   ├── index.html
+│   ├── language
+│   │   ├── english
+│   │   │   ├── calendar_lang.php
+│   │   │   ├── date_lang.php
+│   │   │   ├── db_lang.php
+│   │   │   ├── email_lang.php
+│   │   │   ├── form_validation_lang.php
+│   │   │   ├── ftp_lang.php
+│   │   │   ├── imglib_lang.php
+│   │   │   ├── index.html
+│   │   │   ├── migration_lang.php
+│   │   │   ├── number_lang.php
+│   │   │   ├── pagination_lang.php
+│   │   │   ├── profiler_lang.php
+│   │   │   ├── unit_test_lang.php
+│   │   │   └── upload_lang.php
+│   │   └── index.html
+│   └── libraries
+│       ├── Cache
+│       │   ├── Cache.php
+│       │   ├── drivers
+│       │   │   ├── Cache_apc.php
+│       │   │   ├── Cache_apcu.php
+│       │   │   ├── Cache_dummy.php
+│       │   │   ├── Cache_file.php
+│       │   │   ├── Cache_memcached.php
+│       │   │   ├── Cache_redis.php
+│       │   │   ├── Cache_wincache.php
+│       │   │   └── index.html
+│       │   └── index.html
+│       ├── Calendar.php
+│       ├── Driver.php
+│       ├── Email.php
+│       ├── Encrypt.php
+│       ├── Encryption.php
+│       ├── Form_validation.php
+│       ├── Ftp.php
+│       ├── Image_lib.php
+│       ├── Migration.php
+│       ├── Pagination.php
+│       ├── Parser.php
+│       ├── Profiler.php
+│       ├── Session
+│       │   ├── Session.php
+│       │   ├── Session_driver.php
+│       │   ├── drivers
+│       │   │   ├── Session_database_driver.php
+│       │   │   ├── Session_files_driver.php
+│       │   │   ├── Session_memcached_driver.php
+│       │   │   ├── Session_redis_driver.php
+│       │   │   └── index.html
+│       │   └── index.html
+│       ├── Table.php
+│       ├── Trackback.php
+│       ├── Typography.php
+│       ├── Unit_test.php
+│       ├── Upload.php
+│       ├── User_agent.php
+│       ├── Xmlrpc.php
+│       ├── Xmlrpcs.php
+│       ├── Zip.php
+│       └── index.html
+├── tests
+│   ├── Bootstrap.php
+│   ├── README.md
+│   ├── codeigniter
+│   │   ├── Setup_test.php
+│   │   ├── core
+│   │   │   ├── Benchmark_test.php
+│   │   │   ├── Common_test.php
+│   │   │   ├── Config_test.php
+│   │   │   ├── Input_test.php
+│   │   │   ├── Lang_test.php
+│   │   │   ├── Loader_test.php
+│   │   │   ├── Log_test.php
+│   │   │   ├── Model_test.php
+│   │   │   ├── Output_test.php
+│   │   │   ├── Security_test.php
+│   │   │   ├── URI_test.php
+│   │   │   ├── Utf8_test.php
+│   │   │   └── compat
+│   │   │       ├── hash_test.php
+│   │   │       ├── mbstring_test.php
+│   │   │       ├── password_test.php
+│   │   │       └── standard_test.php
+│   │   ├── database
+│   │   │   ├── DB_driver_test.php
+│   │   │   ├── DB_test.php
+│   │   │   └── query_builder
+│   │   │       ├── count_test.php
+│   │   │       ├── delete_test.php
+│   │   │       ├── distinct_test.php
+│   │   │       ├── empty_test.php
+│   │   │       ├── escape_test.php
+│   │   │       ├── from_test.php
+│   │   │       ├── get_test.php
+│   │   │       ├── group_test.php
+│   │   │       ├── insert_test.php
+│   │   │       ├── join_test.php
+│   │   │       ├── like_test.php
+│   │   │       ├── limit_test.php
+│   │   │       ├── order_test.php
+│   │   │       ├── select_test.php
+│   │   │       ├── truncate_test.php
+│   │   │       ├── update_test.php
+│   │   │       └── where_test.php
+│   │   ├── helpers
+│   │   │   ├── array_helper_test.php
+│   │   │   ├── captcha_helper_test.php
+│   │   │   ├── cookie_helper_test.php
+│   │   │   ├── date_helper_test.php
+│   │   │   ├── directory_helper_test.php
+│   │   │   ├── download_helper_test.php
+│   │   │   ├── file_helper_test.php
+│   │   │   ├── form_helper_test.php
+│   │   │   ├── html_helper_test.php
+│   │   │   ├── inflector_helper_test.php
+│   │   │   ├── language_helper_test.php
+│   │   │   ├── number_helper_test.php
+│   │   │   ├── path_helper_test.php
+│   │   │   ├── security_helper_test.php
+│   │   │   ├── string_helper_test.php
+│   │   │   ├── text_helper_test.php
+│   │   │   ├── url_helper_test.php
+│   │   │   └── xml_helper_test.php
+│   │   └── libraries
+│   │       ├── Calendar_test.php
+│   │       ├── Driver_test.php
+│   │       ├── Encrypt_test.php
+│   │       ├── Encryption_test.php
+│   │       ├── Form_validation_test.php
+│   │       ├── Parser_test.php
+│   │       ├── Session_test.php
+│   │       ├── Table_test.php
+│   │       ├── Typography_test.php
+│   │       ├── Upload_test.php
+│   │       └── Useragent_test.php
+│   ├── mocks
+│   │   ├── autoloader.php
+│   │   ├── ci_testcase.php
+│   │   ├── ci_testconfig.php
+│   │   ├── core
+│   │   │   ├── common.php
+│   │   │   ├── security.php
+│   │   │   └── uri.php
+│   │   ├── database
+│   │   │   ├── ci_test.sqlite
+│   │   │   ├── config
+│   │   │   │   ├── mysql.php
+│   │   │   │   ├── mysqli.php
+│   │   │   │   ├── pdo
+│   │   │   │   │   ├── mysql.php
+│   │   │   │   │   ├── pgsql.php
+│   │   │   │   │   └── sqlite.php
+│   │   │   │   ├── pgsql.php
+│   │   │   │   └── sqlite.php
+│   │   │   ├── db
+│   │   │   │   └── driver.php
+│   │   │   ├── db.php
+│   │   │   ├── drivers
+│   │   │   │   ├── mysql.php
+│   │   │   │   ├── mysqli.php
+│   │   │   │   ├── pdo.php
+│   │   │   │   ├── postgre.php
+│   │   │   │   └── sqlite.php
+│   │   │   └── schema
+│   │   │       └── skeleton.php
+│   │   ├── libraries
+│   │   │   ├── driver.php
+│   │   │   ├── encrypt.php
+│   │   │   ├── encryption.php
+│   │   │   ├── session.php
+│   │   │   └── table.php
+│   │   └── uploads
+│   │       └── ci_logo.gif
+│   ├── phpunit.xml
+│   └── travis
+│       ├── mysql.phpunit.xml
+│       ├── mysqli.phpunit.xml
+│       ├── pdo
+│       │   ├── mysql.phpunit.xml
+│       │   ├── pgsql.phpunit.xml
+│       │   └── sqlite.phpunit.xml
+│       ├── pgsql.phpunit.xml
+│       └── sqlite.phpunit.xml
+├── user_guide_src
+│   ├── Makefile
+│   ├── README.rst
+│   ├── cilexer
+│   │   ├── README
+│   │   ├── cilexer
+│   │   │   ├── __init__.py
+│   │   │   └── cilexer.py
+│   │   └── setup.py
+│   └── source
+│       ├── DCO.rst
+│       ├── _themes
+│       │   └── sphinx_rtd_theme
+│       │       ├── LICENSE
+│       │       ├── __init__.py
+│       │       ├── breadcrumbs.html
+│       │       ├── footer.html
+│       │       ├── layout.html
+│       │       ├── layout_old.html
+│       │       ├── pulldown.html
+│       │       ├── search.html
+│       │       ├── searchbox.html
+│       │       ├── static
+│       │       │   ├── css
+│       │       │   │   ├── badge_only.css
+│       │       │   │   ├── citheme.css
+│       │       │   │   └── theme.css
+│       │       │   ├── fonts
+│       │       │   │   ├── FontAwesome.otf
+│       │       │   │   ├── fontawesome-webfont.eot
+│       │       │   │   ├── fontawesome-webfont.svg
+│       │       │   │   ├── fontawesome-webfont.ttf
+│       │       │   │   └── fontawesome-webfont.woff
+│       │       │   ├── images
+│       │       │   │   └── ci-icon.ico
+│       │       │   └── js
+│       │       │       ├── oldtheme.js
+│       │       │       └── theme.js
+│       │       ├── theme.conf
+│       │       └── versions.html
+│       ├── changelog.rst
+│       ├── conf.py
+│       ├── contributing
+│       │   └── index.rst
+│       ├── database
+│       │   ├── caching.rst
+│       │   ├── call_function.rst
+│       │   ├── configuration.rst
+│       │   ├── connecting.rst
+│       │   ├── db_driver_reference.rst
+│       │   ├── examples.rst
+│       │   ├── forge.rst
+│       │   ├── helpers.rst
+│       │   ├── index.rst
+│       │   ├── metadata.rst
+│       │   ├── queries.rst
+│       │   ├── query_builder.rst
+│       │   ├── results.rst
+│       │   ├── transactions.rst
+│       │   └── utilities.rst
+│       ├── documentation
+│       │   ├── ELDocs.tmbundle.zip
+│       │   └── index.rst
+│       ├── general
+│       │   ├── alternative_php.rst
+│       │   ├── ancillary_classes.rst
+│       │   ├── autoloader.rst
+│       │   ├── caching.rst
+│       │   ├── cli.rst
+│       │   ├── common_functions.rst
+│       │   ├── compatibility_functions.rst
+│       │   ├── controllers.rst
+│       │   ├── core_classes.rst
+│       │   ├── creating_drivers.rst
+│       │   ├── creating_libraries.rst
+│       │   ├── credits.rst
+│       │   ├── drivers.rst
+│       │   ├── environments.rst
+│       │   ├── errors.rst
+│       │   ├── helpers.rst
+│       │   ├── hooks.rst
+│       │   ├── index.rst
+│       │   ├── libraries.rst
+│       │   ├── managing_apps.rst
+│       │   ├── models.rst
+│       │   ├── profiling.rst
+│       │   ├── requirements.rst
+│       │   ├── reserved_names.rst
+│       │   ├── routing.rst
+│       │   ├── security.rst
+│       │   ├── styleguide.rst
+│       │   ├── urls.rst
+│       │   ├── views.rst
+│       │   └── welcome.rst
+│       ├── helpers
+│       │   ├── array_helper.rst
+│       │   ├── captcha_helper.rst
+│       │   ├── cookie_helper.rst
+│       │   ├── date_helper.rst
+│       │   ├── directory_helper.rst
+│       │   ├── download_helper.rst
+│       │   ├── file_helper.rst
+│       │   ├── form_helper.rst
+│       │   ├── html_helper.rst
+│       │   ├── index.rst
+│       │   ├── inflector_helper.rst
+│       │   ├── language_helper.rst
+│       │   ├── number_helper.rst
+│       │   ├── path_helper.rst
+│       │   ├── security_helper.rst
+│       │   ├── string_helper.rst
+│       │   ├── text_helper.rst
+│       │   ├── typography_helper.rst
+│       │   ├── url_helper.rst
+│       │   └── xml_helper.rst
+│       ├── images
+│       │   ├── appflowchart.gif
+│       │   ├── arrow.gif
+│       │   ├── ci-icon.ico
+│       │   ├── ci_logo.jpg
+│       │   ├── ci_logo_flame.jpg
+│       │   ├── file.gif
+│       │   └── folder.gif
+│       ├── index.rst
+│       ├── installation
+│       │   ├── downloads.rst
+│       │   ├── index.rst
+│       │   ├── troubleshooting.rst
+│       │   ├── upgrade_120.rst
+│       │   ├── upgrade_130.rst
+│       │   ├── upgrade_131.rst
+│       │   ├── upgrade_132.rst
+│       │   ├── upgrade_133.rst
+│       │   ├── upgrade_140.rst
+│       │   ├── upgrade_141.rst
+│       │   ├── upgrade_150.rst
+│       │   ├── upgrade_152.rst
+│       │   ├── upgrade_153.rst
+│       │   ├── upgrade_154.rst
+│       │   ├── upgrade_160.rst
+│       │   ├── upgrade_161.rst
+│       │   ├── upgrade_162.rst
+│       │   ├── upgrade_163.rst
+│       │   ├── upgrade_170.rst
+│       │   ├── upgrade_171.rst
+│       │   ├── upgrade_172.rst
+│       │   ├── upgrade_200.rst
+│       │   ├── upgrade_201.rst
+│       │   ├── upgrade_202.rst
+│       │   ├── upgrade_203.rst
+│       │   ├── upgrade_210.rst
+│       │   ├── upgrade_211.rst
+│       │   ├── upgrade_212.rst
+│       │   ├── upgrade_213.rst
+│       │   ├── upgrade_214.rst
+│       │   ├── upgrade_220.rst
+│       │   ├── upgrade_221.rst
+│       │   ├── upgrade_222.rst
+│       │   ├── upgrade_223.rst
+│       │   ├── upgrade_300.rst
+│       │   ├── upgrade_301.rst
+│       │   ├── upgrade_302.rst
+│       │   ├── upgrade_303.rst
+│       │   ├── upgrade_304.rst
+│       │   ├── upgrade_305.rst
+│       │   ├── upgrade_306.rst
+│       │   ├── upgrade_310.rst
+│       │   ├── upgrade_311.rst
+│       │   ├── upgrade_3110.rst
+│       │   ├── upgrade_3111.rst
+│       │   ├── upgrade_312.rst
+│       │   ├── upgrade_313.rst
+│       │   ├── upgrade_314.rst
+│       │   ├── upgrade_315.rst
+│       │   ├── upgrade_316.rst
+│       │   ├── upgrade_317.rst
+│       │   ├── upgrade_318.rst
+│       │   ├── upgrade_319.rst
+│       │   ├── upgrade_320.rst
+│       │   ├── upgrade_b11.rst
+│       │   └── upgrading.rst
+│       ├── libraries
+│       │   ├── benchmark.rst
+│       │   ├── caching.rst
+│       │   ├── calendar.rst
+│       │   ├── config.rst
+│       │   ├── email.rst
+│       │   ├── encrypt.rst
+│       │   ├── encryption.rst
+│       │   ├── file_uploading.rst
+│       │   ├── form_validation.rst
+│       │   ├── ftp.rst
+│       │   ├── image_lib.rst
+│       │   ├── index.rst
+│       │   ├── input.rst
+│       │   ├── language.rst
+│       │   ├── loader.rst
+│       │   ├── migration.rst
+│       │   ├── output.rst
+│       │   ├── pagination.rst
+│       │   ├── parser.rst
+│       │   ├── security.rst
+│       │   ├── sessions.rst
+│       │   ├── table.rst
+│       │   ├── trackback.rst
+│       │   ├── typography.rst
+│       │   ├── unit_testing.rst
+│       │   ├── uri.rst
+│       │   ├── user_agent.rst
+│       │   ├── xmlrpc.rst
+│       │   └── zip.rst
+│       ├── license.rst
+│       ├── overview
+│       │   ├── appflow.rst
+│       │   ├── at_a_glance.rst
+│       │   ├── features.rst
+│       │   ├── getting_started.rst
+│       │   ├── goals.rst
+│       │   ├── index.rst
+│       │   └── mvc.rst
+│       └── tutorial
+│           ├── conclusion.rst
+│           ├── create_news_items.rst
+│           ├── index.rst
+│           ├── news_section.rst
+│           └── static_pages.rst
+└── 폴더구조.txt
+
+84 directories, 549 files
