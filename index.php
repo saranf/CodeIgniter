@@ -72,6 +72,8 @@
  * 노트 : 이들을 변경하는 경우 아래의 error_reporting()  코드도 변경 하십시오
  */
 	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+//기본적으로 제공되는 $_SERVER['CI_ENV']의 값을 사용하며 그렇지 않으면 'development'로 설정되어 있습니다.
+//$_SERVER['CI_ENV']상수는 .htaccess 파일에 정의 될 수 있고, 다른 방법으로는 nginx나 다른 서버로 가능합니다.
 
 /*
  *---------------------------------------------------------------
