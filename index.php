@@ -52,20 +52,24 @@
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT 
- * 
+ * 어플리케이션 환경 
  *---------------------------------------------------------------
  *
  * You can load different configurations depending on your
  * current environment. Setting the environment also influences
  * things like logging and error reporting.
- *
+ * 현재 환경에 따라 다른 구성을 로드 할 수 있습니다. 
+ * 환경 설정은 로깅 및 오류보고와 같은 영향을 미칠 수 있습니다.
+ * 
  * This can be set to anything, but default usage is:
- *
- *     development
- *     testing
- *     production
+ * 이것은 무엇이든 설정할 수 있지만 기본 사용법은 다음과 같습니다 :
+ * 
+ *     development :개발 
+ *     testing :테스트
+ *     production :생산 
  *
  * NOTE: If you change these, also change the error_reporting() code below
+ * 노트 : 이들을 변경하는 경우 아래의 error_reporting()  코드도 변경 하십시오
  */
 	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 
