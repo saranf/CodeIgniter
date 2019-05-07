@@ -124,25 +124,34 @@ switch (ENVIRONMENT)
  * 같은 폴더 안에 이 파일이 없으면 경로를 작성하십시오 
  */
 	$system_path = 'system';
-// system 폴더라 / 폴더에 없으면 $system_path 변수에 작성하십시오 
+// system 폴더가 / 폴더에 없으면 $system_path 변수에 작성하십시오 
 
 /*
  *---------------------------------------------------------------
  * APPLICATION DIRECTORY NAME
+ * 어플리케이션 폴더 이름
  *---------------------------------------------------------------
  *
  * If you want this front controller to use a different "application"
  * directory than the default one you can set its name here.
- * 이 프론트 컨트롤러가 
- * The directory can also be renamed or relocated anywhere on your server. If you do,
- * use an absolute (full) server path.
+ * 이 전면 컨트롤러에서 기본 폴더가 아닌 다른 어플리케이션 폴더를 선택 하려면 이곳에서 해당 이름을 설정하십시오
+ * 
+ * The directory can also be renamed or relocated anywhere on your server. 
+ * 이 폴더는 이름을 바꿀수 있고 또한 당신의 서버 어디에나 다시 배치시킬 수 있습니다.
+ * 
+ * If you do, use an absolute (full) server path.
+ * 만약 당신이 하고 싶다면 완전한 서버 절대 경로를 사용하십시오
+ * 
  * For more info please see the user guide:
- *
+ * 더 많은 정보를 얻기 원하신다면 사용자 가이드를 보십시오
+ * 
  * https://codeigniter.com/user_guide/general/managing_apps.html
  *
  * NO TRAILING SLASH!
+ * 
  */
 	$application_folder = 'application';
+//applicaton 폴더가 /안에 없으면 해당 변수를 
 
 /*
  *---------------------------------------------------------------
