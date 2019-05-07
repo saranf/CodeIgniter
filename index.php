@@ -156,13 +156,21 @@ switch (ENVIRONMENT)
 /*
  *---------------------------------------------------------------
  * VIEW DIRECTORY NAME
+ * view  폴더 이름 
  *---------------------------------------------------------------
  *
  * If you want to move the view directory out of the application
- * directory, set the path to it here. The directory can be renamed
- * and relocated anywhere on your server. If blank, it will default
- * to the standard location inside your application directory.
+ * directory, set the path to it here. 
+ * 만약 당신이 view 폴더를 어플리케이션 폴더 밖으로 이동하고 싶다면 경로를 이곳에 다시 설정하십시오.
+ *
+ * The directory can be renamed and relocated anywhere on your server. 
+ * 이 폴더는 이름을 바꿀수 있고 당신의 모든 서버에 배치할 수 있습니다.
+ * 
+ * If blank, it will default to the standard location inside your application directory.
+ * 만약 비어 있으면 어플리케이션 폴더 안에 있는 표준 위치로 설정 될 것입니다.
+ * 
  * If you do move this, use an absolute (full) server path.
+ * 만약 당신이 이동하고 싶다면 절대 경로를 사용 하십시오
  *
  * NO TRAILING SLASH!
  */
