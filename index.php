@@ -226,16 +226,23 @@ switch (ENVIRONMENT)
 /*
  * -------------------------------------------------------------------
  *  CUSTOM CONFIG VALUES
+ *  자유로운 구성의 값
  * -------------------------------------------------------------------
  *
  * The $assign_to_config array below will be passed dynamically to the
- * config class when initialized. This allows you to set custom config
- * items or override any default config values found in the config.php file.
+ * config class when initialized. 
+ * 아래의 $assign_to_config 배열은 초기화될 때 구성 클래스로 동적으로 전달됩니다.. 
+ * 
+ * This allows you to set custom config items or override any default config values found in the config.php file.
+ * 이를 통해 사용자 정의 구성 항목을 설정하거나 config.php 파일에 있는 기본 구성 값을 재정의할 수 있습니다.
+ * 
  * This can be handy as it permits you to share one application between
  * multiple front controller files, with each file containing different
  * config values.
- *
+ * 이 기능은 여러 개의 전면 컨트롤러 파일 간에 하나의 응용 프로그램을 공유하며 각 파일마다 다른 구성 값을 포함하므로 유용할 수 있습니다.
+ * 
  * Un-comment the $assign_to_config array below to use this feature
+ * 이 기능을 사용하려면 아래의 $assign_to_config 배열을 해제하십시오.
  */
 	// $assign_to_config['name_of_config_item'] = 'value of config item';
 
@@ -248,6 +255,7 @@ switch (ENVIRONMENT)
 /*
  * ---------------------------------------------------------------
  *  Resolve the system path for increased reliability
+ *  사용자 연결 설정의 끝. 이 줄 아래를 읽지 마십시오.
  * ---------------------------------------------------------------
  */
 
