@@ -180,30 +180,46 @@ switch (ENVIRONMENT)
 /*
  * --------------------------------------------------------------------
  * DEFAULT CONTROLLER
+ * 기본 컨트롤러 
  * --------------------------------------------------------------------
  *
  * Normally you will set your default controller in the routes.php file.
- * You can, however, force a custom routing by hard-coding a
- * specific controller class/function here. For most applications, you
- * WILL NOT set your routing here, but it's an option for those
+ * 보통은 당신은 기본 컨트롤러를 routes.php파일 안에 셋팅 해 놓을 것 입니다.
+ * 
+ * You can, however, force a custom routing by hard-coding a specific controller class/function here.
+ * 그러나 여기서 특정 컨트롤러 클래스/기능을 하드코딩하여 사용자 정의 라우팅을 강제 적용할 수 있다.
+ * 
+ * For most applications, you WILL NOT set your routing here, but it's an option for those
  * special instances where you might want to override the standard
  * routing in a specific front controller that shares a common CI installation.
+ * 대부분의 애플리케이션의 경우 여기서 라우팅을 설정할 수는 없지만, 
+ * 공통 CI 설치를 공유하는 특정 전면 컨트롤러에서 표준 라우팅을 재정의할 수 있는 특별한 인스턴스에 대한 옵션입니다.
  *
  * IMPORTANT: If you set the routing here, NO OTHER controller will be
- * callable. In essence, this preference limits your application to ONE
- * specific controller. Leave the function name blank if you need
- * to call functions dynamically via the URI.
- *
+ * callable. 
+ * 중요함 : 당신이 라우팅을 여기서 셋팅 한다면 , 다른 컨트롤러는 호출 할수 없습니다.
+ * 
+ * In essence, this preference limits your application to ONE specific controller.
+ * 본질적으로 이 기본 설정은 응용 프로그램을 특정 컨트롤러 1개로 제한한다.
+ * 
+ * Leave the function name blank if you need to call functions dynamically via the URI.
+ * URI를 통해 동적으로 기능을 호출해야 하는 경우 기능 이름을 비워 두십시오.
+ * 
  * Un-comment the $routing array below to use this feature
+ * 이 기능을 사용하려면 아래의 $routing 배열을 해제하십시오.
  */
 	// The directory name, relative to the "controllers" directory.  Leave blank
+	//"컨트롤러" 디렉토리에 상대적인 디렉토리 이름. 비워두십시오.
 	// if your controller is not in a sub-directory within the "controllers" one
+	// controller가 "controllers"의 하위 디렉터리에 있지 않은 경우
 	// $routing['directory'] = '';
 
 	// The controller class file name.  Example:  mycontroller
+	// 컨트롤러 클래스 파일 이름. 예: my controller
 	// $routing['controller'] = '';
 
 	// The controller function you wish to be called.
+	// 호출할 컨트롤러 기능.
 	// $routing['function']	= '';
 
 
