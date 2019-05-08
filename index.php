@@ -261,9 +261,15 @@ switch (ENVIRONMENT)
  */
 
 	// Set the current directory correctly for CLI requests
+	// CLI 요청에 대해 현재 디렉터리를 올바르게 설정하십시오.
 	if (defined('STDIN'))
+		// 'STDIN' 의 상수가 등록되어 있다면
 	{
 		chdir(dirname(__FILE__));
+		//  "__FILE__" : 심볼릭 링크를 통해 해석된 경우를 포함한 파일의 전체 경로와 이름
+		// "dirname()" :  상위 디렉토리의 경로(즉, 현재 디렉토리에서 레벨 업)에 사용된다.
+		// "chdir()" : 작업디렉토리를 변경하는 PHP 함수
+		// 즉 현재 디렉토리에서 상위 디렉토리로 레벨 업 한다음에 작업 디렉토리를 변경 하는 것이다.
 	}
 
 	if (($_temp = realpath($system_path)) !== FALSE)
