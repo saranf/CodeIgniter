@@ -277,9 +277,7 @@ switch (ENVIRONMENT)
 		//이렇게 해서 나온 경로명은 심볼릭 일크와 '/./' 또는 '/../' 등을 포함하고 있지 않습니다.
 	{
 		$system_path = $_temp.DIRECTORY_SEPARATOR;
-		//DIRECTORY_SEPARATOR 란
-		//유닉스 계열에서 /를 의미하고, 윈도우에서 ￦를 의미하는 상수다. 
-		//파일 경로 적을 때 사실 뭐 그냥 /라고 써도 윈도우에서 잘 되긴 한다.
+		//DIRECTORY_SEPARATOR :유닉스 계열에서 /를 의미하고, 윈도우에서 ￦를 의미하는 상수다. 
 	}
 	else
 	{
@@ -309,21 +307,42 @@ switch (ENVIRONMENT)
 /*
  * -------------------------------------------------------------------
  *  Now that we know the path, set the main path constants
+ *  이제 경로를 알았으니 주 경로 상수를 수정 하십시오
  * -------------------------------------------------------------------
  */
-	// The name of THIS file
+	/* The name of THIS file
+	* 이 파일의 이름
+	*/
 	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
-
-	// Path to the system directory
+	/* "pathinfo()" : 파일 경로에 대한 정보를 반환하는 함수이다. 옵션에 따라 연관 배열 또는 문자열로 반환한다.
+	* "__FILE__" : 심볼릭 링크를 통해 해석된 경우를 포함한 파일의 전체 경로와 이름
+	* SELF 변수는 phpinfo를 통해 변환된 파일 경로의 값을 가진다.. 
+	*/
+	
+	/* Path to the system directory
+	* 시스템 폴더의 경로
+	*/
 	define('BASEPATH', $system_path);
+	// BASEPATH 변수는 $system_path 값을 가지도록 정의한다.
 
-	// Path to the front controller (this file) directory
+	/* Path to the front controller (this file) directory
+	* 프런트 컨트롤러폴더의 경로
+	*/
 	define('FCPATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
+	// "dirname()" :  상위 디렉토리의 경로(즉, 현재 디렉토리에서 레벨 업)에 사용된다.
+	// "DIRECTORY_SEPARATOR" :유닉스 계열에서 /를 의미하고, 윈도우에서 ￦를 의미하는 상수다. 
+	// "__FILE__" : 심볼릭 링크를 통해 해석된 경우를 포함한 파일의 전체 경로와 이름
+	// "." : PHP에서는 주로 문자열을 합칠때 '.'을 사용합니다.
+	// FCPATH변수는 __FILE__변수가 리턴한 폴더 위치의 상위 위치를 가리킵니다.
 
-	// Name of the "system" directory
+	/* Name of the "system" directory
+	* "시스템" 폴더 이름 
+	*/
 	define('SYSDIR', basename(BASEPATH));
 
-	// The path to the "application" directory
+	/* The path to the "application" directory
+	* "어플리케이션" 폴더 경로 
+	*/
 	if (is_dir($application_folder))
 	{
 		if (($_temp = realpath($application_folder)) !== FALSE)
