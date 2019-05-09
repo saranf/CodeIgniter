@@ -151,7 +151,7 @@ switch (ENVIRONMENT)
  * 
  */
 	$application_folder = 'application';
-//applicaton 폴더가 /안에 없으면 해당 변수를 
+//applicaton 폴더가 /안에 없으면 $application_folder 변수에   .
 
 /*
  *---------------------------------------------------------------
@@ -346,10 +346,16 @@ switch (ENVIRONMENT)
 	* "어플리케이션" 폴더 경로 
 	*/
 	if (is_dir($application_folder))
+	// "is_dir()" : 파일 이름이 디렉터리인지 여부 표시
+	// 어플리케이션 폴더 안에 파일 이름값이 디렉토리인지 true false값 리턴 
 	{
 		if (($_temp = realpath($application_folder)) !== FALSE)
+		// "realpath()" : 모든 심볼 링크를 확장하고 입력 경로에 있는 /./, // 및 추가 / 문자에 대한 참조를 확인하고  절대 경로를 반환한다.
+		// 어플리케이션 폴더의 절대 경로를 반환하고 그 값을 $temp 변수에 넣고 그 값이 false값이 아니면 
 		{
 			$application_folder = $_temp;
+			//$application_folder 값에 위에 넣어둔 $temp 값을 넣어둔다. 
+			//결론은 $application_folder 변수는 어플리케이션 폴더 위치가 들어 있다. 
 		}
 		else
 		{
@@ -358,6 +364,9 @@ switch (ENVIRONMENT)
 				'/\\',
 				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
 			);
+			//"strtr" : 문자 변환 또는 문자열의 일부분을 추출하는 함수 
+			//"rtrim" : 문자열 끝에서 공백(또는 다른 문자) 지우기 
+			
 		}
 	}
 	elseif (is_dir(BASEPATH.$application_folder.DIRECTORY_SEPARATOR))
