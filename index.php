@@ -339,6 +339,8 @@ switch (ENVIRONMENT)
 	* "시스템" 폴더 이름 
 	*/
 	define('SYSDIR', basename(BASEPATH));
+	//"basename()" :  경로에서 파일 이름을 반환한다.
+	// "SYSDIR"변수는 $system_path값을 가진 경로에서 파일 이름을 반환하는 값을 가집니다.
 
 	/* The path to the "application" directory
 	* "어플리케이션" 폴더 경로 
