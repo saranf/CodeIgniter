@@ -273,23 +273,35 @@ switch (ENVIRONMENT)
 	}
 
 	if (($_temp = realpath($system_path)) !== FALSE)
+		//realpath()는 path로 입력된 경로에서 모든 심볼릭 링크와 '/./', '/../'로 참조된 경로 그리고 그 외의 '/' 을 확장해서 표준화된 절대 경로명을 반환합니다. 
+		//이렇게 해서 나온 경로명은 심볼릭 일크와 '/./' 또는 '/../' 등을 포함하고 있지 않습니다.
 	{
 		$system_path = $_temp.DIRECTORY_SEPARATOR;
+		//DIRECTORY_SEPARATOR 란
+		//유닉스 계열에서 /를 의미하고, 윈도우에서 ￦를 의미하는 상수다. 
+		//파일 경로 적을 때 사실 뭐 그냥 /라고 써도 윈도우에서 잘 되긴 한다.
 	}
 	else
 	{
 		// Ensure there's a trailing slash
+		// 후행 슬래쉬가 있는지 확인
 		$system_path = strtr(
 			rtrim($system_path, '/\\'),
 			'/\\',
+			// strtr 함수는 chars를 하나씩 번역한다는 것을 의미합니다.
 			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
 		).DIRECTORY_SEPARATOR;
 	}
 
 	// Is the system path correct?
+	// 시스템 경로가 올바른가?
 	if ( ! is_dir($system_path))
+		//is_dir() 함수는 지정된 파일이 디렉터리인지 여부를 확인한다.
+		//이 함수는 디렉토리가 존재하면 TRUE를 반환한다.
 	{
 		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		//header 함수는 가공하지 않은 http 를 송신할 때 보내는 함수 이다.
+		
 		echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME);
 		exit(3); // EXIT_CONFIG
 	}
