@@ -370,6 +370,8 @@ switch (ENVIRONMENT)
 		}
 	}
 	elseif (is_dir(BASEPATH.$application_folder.DIRECTORY_SEPARATOR))
+//"is_dir()" : 지정된 파일이 디렉터리인지 여부를 확인한다 .
+//"DIRECTORY_SEPARATOR" : 디렉토리 구분 상수 
 	{
 		$application_folder = BASEPATH.strtr(
 			trim($application_folder, '/\\'),
@@ -387,6 +389,7 @@ switch (ENVIRONMENT)
 	define('APPPATH', $application_folder.DIRECTORY_SEPARATOR);
 
 	// The path to the "views" directory
+	// 이 경로는 뷰 폴더 입니다.
 	if ( ! isset($view_folder[0]) && is_dir(APPPATH.'views'.DIRECTORY_SEPARATOR))
 	{
 		$view_folder = APPPATH.'views';
@@ -394,6 +397,7 @@ switch (ENVIRONMENT)
 	elseif (is_dir($view_folder))
 	{
 		if (($_temp = realpath($view_folder)) !== FALSE)
+//"realpath()": 절대 경로를 반환한다.
 		{
 			$view_folder = $_temp;
 		}
